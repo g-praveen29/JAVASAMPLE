@@ -1,8 +1,10 @@
 class Hello{
-public static String greet(String name){
-return "WELCOME TO DEVOPS LAB" + " " + name;
-}
 public static void main(String[] args){
-System.out.println(greet(args[0]));
+  String name = System.getenv("USERNAME_VAR");
+  if(name != null){
+  System.out.println("WELCOME TO DEVOPS USER" + " " + name);
+} else{
+  System.out.println("Environment variable not set1");
+}
 }
 }
